@@ -6815,7 +6815,7 @@ header #main-nav ul.main-level li:last-child {
 }
 header #main-nav ul.main-level li ul.sub-level {
   margin: 0;
-  padding: 8px 0 0;
+  padding: 0;
   position: absolute;
   z-index: 9999;
   top: 100%;
@@ -6911,7 +6911,7 @@ header #main-nav:focus {
     margin: 0;
     width: 235px;
     height: 100%;
-    background: #333333;
+    background: #1d1d1d;
     webkit-transition: left 0.35s linear;
     -moz-transition: left 0.35s linear;
     -o-transition: left 0.35s linear;
@@ -6920,7 +6920,7 @@ header #main-nav:focus {
   header #main-nav ul.main-level li {
     padding: 0;
     display: block;
-    background: #1d1d1d;
+    background: #000000;
   }
   header #main-nav ul.main-level li.expanded {
     background: #e31937;
@@ -6948,7 +6948,7 @@ header #main-nav:focus {
     transition: height 0.2s linear;
   }
   header #main-nav ul.main-level li ul.sub-level li {
-    background: #f1f1f1;
+    background: #ebebeb;
     white-space: normal;
   }
   header #main-nav ul.main-level li ul.sub-level li a {
@@ -6957,7 +6957,6 @@ header #main-nav:focus {
     width: 220px;
     border-bottom: 1px solid #f1f1f1;
     border-top: 1px solid #dadada;
-    border-right: 1px solid #dadada;
   }
   header #main-nav ul.main-level li ul.sub-level li a.active,
   header #main-nav ul.main-level li ul.sub-level li a:hover,
@@ -6965,14 +6964,12 @@ header #main-nav:focus {
     background: none;
     border-bottom: 1px solid #f1f1f1;
     border-top: 1px solid #dadada;
-    border-right: 1px solid #dadada;
   }
   header #main-nav a {
     display: block;
     margin-left: 15px;
     border-bottom: 1px solid #1d1d1d;
     border-top: 1px solid #3D3D3D;
-    border-right: 1px solid #1d1d1d;
     padding: 10px 0 6px;
     color: #ffffff;
     text-shadow: none;
@@ -6983,7 +6980,7 @@ header #main-nav:focus {
   header #main-nav a:focus {
     border-bottom: 1px solid #1d1d1d;
     border-top: 1px solid #3D3D3D;
-    border-right: 1px solid #1d1d1d;
+    color: #ffffff;
   }
   header #main-nav.collapsed {
     left: -235px;
@@ -7063,6 +7060,71 @@ footer .policy {
   font-size: 18px;
   margin: 24px 0 0;
 }
+@media (max-width: 991px) and (min-width: 768px) {
+  footer a,
+  footer span {
+    margin: 14px 15px 0;
+    font-size: 18px;
+  }
+  footer .logo {
+    margin-right: 15px;
+  }
+  footer .logo img {
+    width: 170px;
+  }
+  footer .policy {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    border-bottom: 7px solid #000000;
+    padding: 10px 0 15px;
+    text-align: center;
+  }
+  footer .social {
+    display: block;
+  }
+  footer .social li a {
+    margin: 10px 0;
+  }
+  footer span {
+    margin: 0;
+  }
+}
+.footer-above {
+  background: #ebebeb;
+  padding: 20px 0 15px;
+  border-top: 7px solid #000000;
+}
+.footer-above .half {
+  width: 50%;
+  display: inline-block;
+}
+.footer-above .half .btn {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+}
+.footer-above .half:first-child {
+  padding-right: 15px;
+}
+.footer-above .half:last-child {
+  padding-left: 15px;
+}
+.footer-above p {
+  margin: 20px 0 0;
+  text-align: center;
+}
+.footer-above p a {
+  color: #000000;
+  font-size: 15px;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0 10px;
+}
 .banner {
   margin-bottom: 30px;
 }
@@ -7085,6 +7147,22 @@ footer .policy {
   font-size: 22px;
   font-family: Arial, sans-serif;
   line-height: 1.3em;
+}
+.content p a {
+  color: #e31937;
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .content {
+    padding-bottom: 35px;
+  }
+  .content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .content p {
+    font-size: 18px;
+  }
 }
 .spot-marketing {
   margin-bottom: 30px;
@@ -7127,6 +7205,52 @@ footer .policy {
   min-height: 200px;
   text-align: left;
 }
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .spot-marketing .item h2 {
+    min-height: 86px;
+  }
+  .spot-marketing .item p {
+    min-height: 256px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .spot-marketing .item h2 {
+    min-height: 80px;
+    font-size: 24px;
+  }
+  .spot-marketing .item p {
+    min-height: 312px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .spot-marketing .item h2 {
+    min-height: 76px;
+    font-size: 22px;
+  }
+  .spot-marketing .item p {
+    min-height: 308px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .spot-marketing {
+    margin-bottom: 20px;
+  }
+  .spot-marketing .item p {
+    min-height: 0;
+  }
+}
+@media (max-width: 480px) {
+  .spot-marketing {
+    margin-bottom: 20px;
+  }
+  .spot-marketing .item h2 {
+    font-size: 22px;
+  }
+  .spot-marketing .item p {
+    font-size: 18px;
+  }
+}
 .videos {
   margin-bottom: 40px;
 }
@@ -7139,13 +7263,24 @@ footer .policy {
 .videos .item .play {
   position: absolute;
   background: rgba(255, 255, 255, 0.73);
-  padding: 30px 37px 31px 44px;
+  padding: 5% 6.1% 5.1% 7.3%;
   border-radius: 8px;
-  top: 45%;
-  left: 50%;
-  margin-top: -54px;
-  margin-left: -61px;
+  width: 19.3%;
+  height: 29.3%;
+  left: 40.3%;
+  top: 30%;
 }
 .videos .item .video {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .videos {
+    background: #ececec;
+    padding: 8px 0 13px;
+    margin-bottom: 30px;
+  }
+  .videos .item {
+    background: #ffffff;
+    margin: 7px auto;
+  }
 }

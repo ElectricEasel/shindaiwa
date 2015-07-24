@@ -283,7 +283,7 @@ header {
                 }
                 ul.sub-level {
                     margin: 0;
-                    padding: 8px 0 0;
+                    padding: 0;
                     position: absolute;
                     z-index: 9999;
                     top: 100%;
@@ -380,7 +380,7 @@ header {
             margin: 0;
             width: @mb-menu-width;
             height: 100%;
-            background: #333333;
+            background: #1d1d1d;
             webkit-transition: left 0.35s linear;
             -moz-transition: left 0.35s linear;
             -o-transition: left 0.35s linear;
@@ -389,7 +389,7 @@ header {
             ul.main-level li {
                 padding: 0;
                 display: block;
-                background: #1d1d1d;
+                background: @black;
 
                 &.expanded {
                     background: @red;
@@ -418,7 +418,7 @@ header {
                     transition: height 0.2s linear;
 
                     li {
-                        background: #f1f1f1;
+                        background: #ebebeb;
                         white-space: normal;
 
                         a {
@@ -427,13 +427,11 @@ header {
                             width: 220px;
                             border-bottom: 1px solid #f1f1f1;
                             border-top: 1px solid #dadada;
-                            border-right: 1px solid #dadada;
 
                             &.active, &:hover, &:focus {
                                 background: none;
                                 border-bottom: 1px solid #f1f1f1;
                                 border-top: 1px solid #dadada;
-                                border-right: 1px solid #dadada;
                             }
                         }
                     }
@@ -444,7 +442,6 @@ header {
                 margin-left: 15px;
                 border-bottom: 1px solid #1d1d1d;
                 border-top: 1px solid #3D3D3D;
-                border-right: 1px solid #1d1d1d;
                 padding: 10px 0 6px;
                 color: @white;
                 text-shadow: none;
@@ -453,7 +450,7 @@ header {
                 &.active, &:hover, &:focus {
                     border-bottom: 1px solid #1d1d1d;
                     border-top: 1px solid #3D3D3D;
-                    border-right: 1px solid #1d1d1d;
+                    color: @white;
                 }
             }
             &.collapsed {
@@ -534,6 +531,74 @@ footer {
         font-size: 18px;
         margin: 24px 0 0;
     }
+    @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+        a, span {
+            margin: 14px 15px 0;
+            font-size: 18px;
+        }
+        .logo {
+            margin-right: 15px;
+
+            img {
+                width: 170px;
+            }
+        }
+        .policy {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        border-bottom: 7px solid @black;
+        padding: 10px 0 15px;
+        text-align: center;
+
+        .social {
+            display: block;
+
+            li a {
+                margin: 10px 0;
+            }
+        }
+        span {
+            margin: 0;
+        }
+    }
+}
+.footer-above {
+    background: #ebebeb;
+    padding: 20px 0 15px;
+    border-top: 7px solid @black;
+
+    .half {
+        width: 50%;
+        display: inline-block;
+
+        .btn {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            text-align: center;
+        }
+        &:first-child {
+            padding-right: 15px;
+        }
+        &:last-child {
+            padding-left: 15px;
+        }
+    }
+    p {
+        margin: 20px 0 0;
+        text-align: center;
+
+        a {
+            color: @black;
+            font-size: 15px;
+            text-decoration: underline;
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
 }
 .banner {
     margin-bottom: 30px;
@@ -555,6 +620,21 @@ footer {
         font-size: 22px;
         .sans;
         line-height: 1.3em;
+
+        a {
+            color: @red;
+            text-decoration: underline;
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        padding-bottom: 35px;
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+        }
     }
 }
 .spot-marketing {
@@ -597,8 +677,57 @@ footer {
             min-height: 200px;
             text-align: left;
         }
-        .btn {
-
+    }
+    @media (max-width:@screen-lg-max) and (min-width:@screen-lg-min) {
+        .item {
+            h2 {
+                min-height: 86px;
+            }
+            p {
+                min-height: 256px;
+            }
+        }
+    }
+    @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
+        .item {
+            h2 {
+                min-height: 80px;
+                font-size: 24px;
+            }
+            p {
+                min-height: 312px;
+            }
+        }
+    }
+    @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+        .item {
+            h2 {
+                min-height: 76px;
+                font-size: 22px;
+            }
+            p {
+                min-height: 308px;
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        margin-bottom: 20px;
+        .item {
+            p {
+                min-height: 0;
+            }
+        }
+    }
+    @media (max-width:@screen-mb-max) {
+        margin-bottom: 20px;
+        .item {
+            h2 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -613,15 +742,25 @@ footer {
         .play {
             position: absolute;
             background: rgba(255,255,255,0.73);
-            padding: 30px 37px 31px 44px;
+            padding: 5% 6.1% 5.1% 7.3%;
             border-radius: 8px;
-            top: 45%;
-            left: 50%;
-            margin-top: -54px;
-            margin-left: -61px;
+            width: 19.3%;
+            height: 29.3%;
+            left: 40.3%;
+            top: 30%;
         }
         .video {
             width: 100%;
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        background: #ececec;
+        padding: 8px 0 13px;
+        margin-bottom: 30px;
+
+        .item {
+            background: @white;
+            margin: 7px auto;
         }
     }
 }
