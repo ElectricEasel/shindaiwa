@@ -43,7 +43,7 @@
 
 body {
     box-sizing: border-box;
-    background: #ececec;
+    background: url(/images/bg-diamond.jpg) 0 0 repeat #f7f7f7;
     position: relative;
     left: 0;
     webkit-transition: left 0.35s linear;
@@ -66,9 +66,11 @@ body.expanded {
 }
 .wrap {
     width: 100%;
-    max-width: 1366px;
+    max-width: 1466px;
     margin: 0 auto;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 0 50px;
+    background: url(/images/bg-gray2.jpg) left top repeat-y,
+                url(/images/bg-gray2.jpg) right top repeat-y;
 }
 .content {
     background: @white;
@@ -338,27 +340,30 @@ header {
         ul.main-level {
             @media (max-width:@screen-lg-max) and (min-width:@screen-lg-min) {
                 li {
-                    padding-right: 35px;
+                    padding-right: 26px;
                 }
             }
             @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
                 li {
-                    padding-right: 8px;
+                    padding-right: 7px;
+
+                    a {
+                        font-size: 16px;
+                    }
                 }
             }
             @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
-                margin-top: 15px;
 
                 li {
-                    padding-right: 6px;
+                    padding-right: 5px;
                     padding-left: 5px;
 
                     a {
-                        font-size: 14px;
+                        font-size: 13px;
                     }
                     ul.sub-level li a {
                         padding-left: 5px;
-                        font-size: 14px;
+                        font-size: 13px;
                     }
                 }
             }
@@ -470,6 +475,7 @@ header {
     #nav-toggle {
         cursor: pointer;
         width: 28px;
+        text-align: center;
 
         span {
             display: block;
@@ -481,7 +487,7 @@ header {
         h6 {
             margin: 0;
             .sans2;
-            font-size: 11px;
+            font-size: 12px;
             color: @white;
         }
     }
