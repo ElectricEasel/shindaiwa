@@ -1,0 +1,26 @@
+@import 'variables.less';
+header #main-nav a {
+	font-size: 14px;
+}
+header #main-nav ul.main-level {
+    @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+        li {
+            a {
+                font-size: 12px;
+            }
+            ul.sub-level li a {
+                font-size: 12px;
+            }
+        }
+    }
+}
+.btn {
+	font-size: 14px;
+}
+footer.desktop {
+	@media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+	    h3 {
+	        font-size: 14px;
+	    }
+	}
+}

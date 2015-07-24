@@ -1,0 +1,19 @@
+header #main-nav a {
+  font-size: 14px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  header #main-nav ul.main-level li a {
+    font-size: 12px;
+  }
+  header #main-nav ul.main-level li ul.sub-level li a {
+    font-size: 12px;
+  }
+}
+.btn {
+  font-size: 14px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  footer.desktop h3 {
+    font-size: 14px;
+  }
+}
