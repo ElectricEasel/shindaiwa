@@ -12,12 +12,15 @@ header #main-nav a {
 .btn {
   font-size: 14px;
 }
+.spot-marketing .item h2 {
+  font-size: 23px;
+}
 .spot-marketing .item p {
   height: 200px;
 }
 @media (max-width: 1399px) and (min-width: 1200px) {
   .spot-marketing .item h2 {
-    height: 86px;
+    height: 76px;
   }
   .spot-marketing .item p {
     height: 256px;
@@ -25,7 +28,7 @@ header #main-nav a {
 }
 @media (max-width: 1199px) and (min-width: 992px) {
   .spot-marketing .item h2 {
-    height: 80px;
+    height: 70px;
   }
   .spot-marketing .item p {
     height: 312px;
@@ -33,7 +36,9 @@ header #main-nav a {
 }
 @media (max-width: 991px) and (min-width: 768px) {
   .spot-marketing .item h2 {
-    height: 76px;
+    height: 56px;
+    font-size: 18px;
+    padding-right: 20px;
   }
   .spot-marketing .item p {
     height: 308px;
