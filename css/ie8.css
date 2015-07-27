@@ -20,7 +20,8 @@ header #main-nav a {
 }
 @media (max-width: 1399px) and (min-width: 1200px) {
   .spot-marketing .item h2 {
-    height: 76px;
+    height: 80px;
+    min-height: 0;
   }
   .spot-marketing .item p {
     height: 256px;
@@ -28,7 +29,8 @@ header #main-nav a {
 }
 @media (max-width: 1199px) and (min-width: 992px) {
   .spot-marketing .item h2 {
-    height: 70px;
+    height: 84px;
+    min-height: 0;
   }
   .spot-marketing .item p {
     height: 312px;
@@ -36,9 +38,10 @@ header #main-nav a {
 }
 @media (max-width: 991px) and (min-width: 768px) {
   .spot-marketing .item h2 {
-    height: 56px;
+    height: 76px;
+    min-height: 0;
     font-size: 18px;
-    padding-right: 20px;
+    padding-right: 10px;
   }
   .spot-marketing .item p {
     height: 308px;
