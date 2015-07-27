@@ -17,10 +17,40 @@ header #main-nav ul.main-level {
 .btn {
 	font-size: 14px;
 }
-footer.desktop {
-	@media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
-	    h3 {
-	        font-size: 14px;
-	    }
-	}
+.spot-marketing {
+    .item {
+        p {
+            height: 200px;
+        }
+    }
+    @media (max-width:@screen-lg-max) and (min-width:@screen-lg-min) {
+        .item {
+            h2 {
+                height: 86px;
+            }
+            p {
+                height: 256px;
+            }
+        }
+    }
+    @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
+        .item {
+            h2 {
+                height: 80px;
+            }
+            p {
+                height: 312px;
+            }
+        }
+    }
+    @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+        .item {
+            h2 {
+                height: 76px;
+            }
+            p {
+                height: 308px;
+            }
+        }
+    }
 }

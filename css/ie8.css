@@ -12,8 +12,30 @@ header #main-nav a {
 .btn {
   font-size: 14px;
 }
+.spot-marketing .item p {
+  height: 200px;
+}
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .spot-marketing .item h2 {
+    height: 86px;
+  }
+  .spot-marketing .item p {
+    height: 256px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .spot-marketing .item h2 {
+    height: 80px;
+  }
+  .spot-marketing .item p {
+    height: 312px;
+  }
+}
 @media (max-width: 991px) and (min-width: 768px) {
-  footer.desktop h3 {
-    font-size: 14px;
+  .spot-marketing .item h2 {
+    height: 76px;
+  }
+  .spot-marketing .item p {
+    height: 308px;
   }
 }
