@@ -8,6 +8,27 @@
     font-weight: 900;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Helvetica Neue Cn';
+    src: url(/fonts/HelveticaNeue/HelveticaNeue-CondensedBold.ttf) format('truetype'),
+    url(/fonts/HelveticaNeue/HelveticaNeue-CondensedBold.otf) format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Neue Cn';
+    src: url(/fonts/HelveticaNeue/HelveticaNeueLTStd-LtCn.ttf) format('truetype'),
+    url(/fonts/HelveticaNeue/HelveticaNeueLTStd-LtCn.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Haettenschweiler';
+    src: url(/fonts/Haettenschweiler/Haettenschweiler.ttf) format('truetype'),
+    url(/fonts/Haettenschweiler/Haettenschweiler.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 .antialiased() {
   -webkit-font-smoothing: antialiased;
@@ -75,15 +96,19 @@ body.expanded {
     max-width: 1366px;
     margin: 0 auto;
 }
-.content {
-    background: @white;
-}
 
 p, li, span, a, div {
     line-height: 1.5em;
 }
 h1, h2, h3, h4, h5, h6, td, th {
     line-height: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 .btn {
@@ -121,8 +146,6 @@ h1, h2, h3, h4, h5, h6, td, th {
     }
 }
 .social {
-    padding: 0;
-    margin: 0;
     display: inline-block;
 
     li {
@@ -264,9 +287,6 @@ header {
         margin: 14px 0 12px;
 
         ul.main-level {
-            margin: 0;
-            padding: 0;
-
             li {
                 display: inline-block;
                 padding: 0 25px 0 15px;
@@ -282,8 +302,6 @@ header {
                     padding-right: 0;
                 }
                 ul.sub-level {
-                    margin: 0;
-                    padding: 0;
                     position: absolute;
                     z-index: 9999;
                     top: 100%;
@@ -600,6 +618,74 @@ footer {
         }
     }
 }
+.content {
+    background: @white;
+    padding-bottom: 50px;
+
+    h1 {
+        color: @black;
+        font-size: 48px;
+        .sans2;
+        margin: 0 0 10px;
+
+        @media (max-width:@screen-tb-max) {
+            color: @red;
+            font-size: 35px;
+            margin-top: 20px;
+        }
+    }
+    p {
+        color: @black;
+        font-size: 15px;
+        .sans;
+        line-height: 1.4em;
+
+        a {
+            color: @red;
+            text-decoration: underline;
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        padding-bottom: 35px;
+    }
+}
+#home {
+    p {
+        color: @black;
+        font-size: 22px;
+        .sans;
+        line-height: 1.3em;
+
+        a {
+            color: @red;
+            text-decoration: underline;
+        }
+    }
+    h1 {
+        color: @red;
+        font-size: 52px;
+        .sans2;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+    }
+    @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+        h1 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        p {
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+    }
+}
 .banner {
     margin-bottom: 30px;
     img {
@@ -621,36 +707,38 @@ footer {
         }
     }
 }
-.content {
-    padding-bottom: 50px;
+.banner-thin {
+    padding: 35px 0 59px 150px;
     h1 {
-        color: @red;
-        font-size: 52px;
-        .sans2;
-        text-transform: uppercase;
-        margin: 0 0 20px;
-    }
-    p {
-        color: @black;
-        font-size: 22px;
-        .sans;
-        line-height: 1.3em;
+        font-family: "Haettenschweiler", "Helvetica Neue Cn", Arial, sans-serif;
+        color: @white;
+        font-size: 85px;
+        text-shadow: 1px 2px 7px #000;
+        margin: 0;
+        padding-left: 37px;
+        text-transform: lowercase;
+        .antialiased;
+        font-weight: 400;
+        position: relative;
 
-        a {
-            color: @red;
-            text-decoration: underline;
+        &:before {
+            content: "";
+            display: block;
+            height: 23px;
+            width: 23px;
+            background: @red;
+            box-shadow: 1px 2px 7px #000;
+            position: absolute;
+            left: 0;
+            top: 39px;
         }
     }
-    @media (max-width:@screen-tb-max) {
-        padding-bottom: 35px;
-        h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        p {
-            font-size: 18px;
-        }
-    }
+}
+#products .banner-thin {
+    background: url(/images/banner-products.jpg) center top no-repeat;
+}
+#blowers .banner-thin {
+    background: url(/images/banner-blowers.jpg) center top no-repeat;
 }
 .spot-marketing {
     margin-bottom: 30px;
@@ -668,6 +756,7 @@ footer {
             padding: 20px 0 12px 62px;
             margin: 0;
             text-align: left;
+            text-transform: none;
 
             &:before {
                 content: "";
@@ -749,23 +838,42 @@ footer {
 .videos {
     margin-bottom: 40px;
     .item {
-        background: #ececec;
+        background: @grayLightest;
         padding: 15px;
-        position: relative;
-        display: inline-block;
 
-        .play {
-            position: absolute;
-            background: rgba(255,255,255,0.73);
-            padding: 5% 6.1% 5.1% 7.3%;
-            border-radius: 8px;
-            width: 19.3%;
-            height: 29.3%;
-            left: 40.3%;
-            top: 30%;
+        .video-box {
+            position: relative;
+            display: block;
+
+            .play {
+                box-sizing: content-box;
+                position: absolute;
+                background: rgba(255,255,255,0.73);
+                padding: 6% 7.8% 7% 9.6%;
+                border-radius: 8px;
+                width: 9%;
+                height: 16.8%;
+                left: 36.3%;
+                top: 23%;
+            }
+            .video {
+                width: 100%;
+            }
         }
-        .video {
-            width: 100%;
+    }
+}
+#home .videos {
+    .item {
+        background: #ececec;
+
+        .video-box {
+            .play {
+                padding: 4.8% 5.8% 5.4% 6.6%;
+                width: 6.8%;
+                height: 13.8%;
+                left: 41%;
+                top: 29%;
+            }
         }
     }
     @media (max-width:@screen-tb-max) {
@@ -777,5 +885,638 @@ footer {
             background: @white;
             margin: 7px auto;
         }
+    }
+}
+.breadcrumbs {
+    background: @graylight;
+    padding: 6px 0 11px;
+    margin-bottom: 30px;
+
+    ul {
+        li {
+            display: inline-block;
+            color: @black;
+            font-size: 12px;
+            .sans;
+            font-weight: bold;
+
+            a {
+                text-decoration: underline;
+                color: @red;
+            }
+        }
+    }
+}
+.product-tiles {
+    padding: 0 0 30px;
+
+    .row {
+        margin-top: 30px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .tile {
+        background: url(/images/bg-gray2.jpg) 0 0 no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 208px;
+        overflow: hidden;
+        padding: 20px 27px;
+        display: block;
+        text-decoration: none;
+
+        h3 {
+            .sans2;
+            color: @red;
+            font-size: 32px;
+            margin: 0;
+            text-decoration: none;
+            position: relative;
+            z-index: 20;
+        }
+        img {
+            position: absolute;
+            z-index: 10;
+        }
+        @media (max-width:@screen-lg-max) and (min-width:@screen-sm-min) {
+            padding-right: 20px;
+            padding-left: 20px;
+
+            h3 {
+                font-size: 28px;
+            }
+        }
+        @media (max-width:@screen-lg-max) and (min-width:@screen-md-min) {
+            height: 186px;
+        }
+        @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+            height: 162px;
+        }
+    }
+    .tile-blowers {
+        img {
+            bottom: 0;
+            right: 8%;
+            width: 52%;
+        }
+    }
+    .tile-brushcutters {
+        img {
+            bottom: 6%;
+            right: 0;
+            width: 83.5%;
+        }
+    }
+    .tile-edgers {
+        img {
+            bottom: 6.5%;
+            right: 5%;
+            width: 79.4%;
+        }
+    }
+    .tile-multi-tool {
+        img {
+            bottom: 6%;
+            right: 0;
+            width: 90%;
+        }
+    }
+    .tile-hedge-trimmers {
+        img {
+            bottom: 4%;
+            right: 5.5%;
+            width: 69.5%;
+        }
+    }
+    .tile-articulated-hedge-trimmer {
+        img {
+            bottom: 6%;
+            right: 9%;
+            width: 80.1%;
+        }
+    }
+    .tile-trimmers {
+        img {
+            bottom: 3%;
+            right: 4%;
+            width: 84.2%;
+        }
+    }
+    .tile-power-broom {
+        img {
+            bottom: 0;
+            right: 3%;
+            width: 63.4%;
+        }
+    }
+    .tile-spreaders {
+        img {
+            bottom: 3%;
+            right: 7.5%;
+            width: 40.7%;
+        }
+    }
+    .tile-sprayers {
+        img {
+            bottom: 0;
+            right: 8.5%;
+            width: 40.6%;
+        }
+    }
+    .tile-speed-feed {
+        img {
+            bottom: 0;
+            right: 1.5%;
+            width: 53.7%;
+        }
+    }
+    .tile-accessories {
+        img {
+            bottom: 0;
+            right: 4%;
+            width: 67.5%;
+        }
+    }
+    .tile-red-armor {
+        img {
+            bottom: 0;
+            right: 4%;
+            width: 49.6%;
+        }
+    }
+    @media (max-width:@screen-tb-max) {
+        padding: 0 0 30px;
+        background: #f6f6f6;
+
+        .row {
+            margin-top: 0;
+
+            > div {
+                padding: 0;
+            }
+        }
+        .tile {
+            background: none;
+            height: 160px;
+            border-top: 2px solid #e6e6e6;
+            width: 100%;
+
+            h3 {
+                font-size: 28px;
+            }
+        }
+        .tile-blowers {
+            img {
+                width: 162px;
+                bottom: 0;
+                right: 40px;
+            }
+        }
+        .tile-brushcutters {
+            img {
+                width: 255px;
+                bottom: 6px;
+                right: 15px;
+            }
+        }
+        .tile-edgers {
+            img {
+                width: 255px;
+                bottom: 10px;
+                right: 35px;
+            }
+        }
+        .tile-multi-tool {
+            img {
+                width: 260px;
+                bottom: 15px;
+                right: 25px;
+            }
+        }
+        .tile-hedge-trimmers {
+            img {
+                width: 200px;
+                bottom: 8px;
+                right: 40px;
+            }
+        }
+        .tile-articulated-hedge-trimmer {
+            img {
+                width: 250px;
+                bottom: 2px;
+                right: 45px;
+            }
+        }
+        .tile-trimmers {
+            img {
+                width: 260px;
+                bottom: 6px;
+                right: 20px;
+            }
+        }
+        .tile-power-broom {
+            img {
+                width: 200px;
+                bottom: 0;
+                right: 25px;
+            }
+        }
+        .tile-spreaders {
+            img {
+                width: 120px;
+                bottom: 6px;
+                right: 55px;
+            }
+        }
+        .tile-sprayers {
+            img {
+                width: 127px;
+                bottom: 0;
+                right: 52px;
+            }
+        }
+        .tile-speed-feed {
+            img {
+                width: 160px;
+                bottom: 0;
+                right: 22px;
+            }
+        }
+        .tile-accessories {
+            img {
+                width: 190px;
+                bottom: 0;
+                right: 40px;
+            }
+        }
+        .tile-red-armor {
+            img {
+                width: 145px;
+                bottom: 0;
+                right: 40px;
+            }
+        }
+    }
+}
+.product-choose {
+    padding: 10px 0 31px;
+
+    .btn {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            border-top: 9px solid @white;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-bottom: 9px solid transparent;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    }
+}
+#products {
+    padding-top: 15px;
+
+    @media (max-width:@screen-tb-max) {
+        &.content {
+            padding-bottom: 0;
+        }
+    }
+}
+.module {
+    background: url(/images/bg-gray2.jpg) 0 0 no-repeat @grayLightest;
+    background-size: contain;
+    padding: 20px 25px 45px;
+
+    h3 {
+        color: @red;
+        font-size: 30px;
+        .sans2;
+        text-transform: uppercase;
+        margin: 0 0 15px;
+    }
+    @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
+        padding: 20px 5px 45px 20px;
+    }
+}
+.module.menu {
+    @media (max-width:@screen-sm-max) {
+        display: none;
+    }
+}
+#side-nav {
+    ul.main-level {
+        li {
+            display: block;
+
+            a {
+                display: inline-block;
+                color: @black;
+                font-size: 20px;
+                .sans2;
+                text-decoration: none;
+                text-shadow: 1px 1px 2px #fff;
+                line-height: 1.7em;
+
+                @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
+                    font-size: 18px;
+                }
+            }
+            ul.sub-level {
+                margin-left: 15px;
+
+                li {
+                    display: block;
+
+                    a {
+                        display: inline-block;
+                        color: #6c6c6c;
+                        font-size: 18px;
+                        .sans2;
+                        text-shadow: 1px 1px 2px #fff;
+                        line-height: 1.5em;
+                        font-weight: 400;
+                        text-decoration: underline;
+
+                        @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            &.expanded {
+                margin-bottom: 4px;
+
+                a.parent {
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+}
+.products-page {
+    .overview {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h1 {
+            text-align: left;
+        }
+        p {
+            text-align: left;
+
+            a {
+                white-space: nowrap;
+            }
+        }
+        .btn {
+            margin-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .product-choose {
+            padding-top: 10px;
+
+            .btn {
+                margin-top: 0;
+            }
+        }
+        .videos {
+            margin-bottom: 0;
+            .item {
+                overflow: hidden;
+
+                .video-box {
+                    margin-bottom: 10px;
+                }
+            }
+            strong.caption {
+                float: left;
+                font-size: 13px;
+                color: @black;
+                .sans;
+            }
+            .scroller {
+                float: right;
+
+                li {
+                    display: inline-block;
+                    font-size: 13px;
+                    color: @black;
+                    .sans;
+
+                    a {
+                        color: @red;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        @media (max-width:@screen-tb-max) {
+            .seemore {
+                height: 0;
+
+                p {
+                    display: inline-block;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    overflow: hidden;
+                }
+            }
+            .seemore-inline {
+                display: none;
+            }
+        }
+    }
+}
+.product-item-tiles {
+    .row {
+        margin-top: 30px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .tile {
+        background: @grayLightest;
+        padding: 25px 5px 25px 25px;
+
+        h4 {
+            color: @red;
+            font-size: 30px;
+            .sans2;
+            .antialiased;
+
+            a {
+                color: @red;
+                text-decoration: underline;
+            }
+        }
+        h5 {
+            color: @black;
+            font-size: 20px;
+            .sans2;
+            font-weight: 800;
+        }
+        .info {
+            @media (min-width:@screen-xl-min) {
+                min-height: 189px;
+            }
+            @media (max-width:@screen-lg-max) and (min-width:@screen-lg-min) {
+                min-height: 207px;
+            }
+            @media (max-width:@screen-md-max) and (min-width:@screen-sm-min) {
+                min-height: 228px;
+            }
+        }
+        span {
+            color: @black;
+            font-size: 17px;
+            .sans2;
+            display: block;
+
+            strong {
+                color: @red;
+                font-size: 23px;
+                display: inline-block;
+                margin-left: 2px;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto 7px;
+            width: auto;
+            max-width: 100%;
+        }
+    }
+    .eb212 img {
+        margin-top: -39px;
+        margin-bottom: 15px;
+    }
+    .eb344 img {
+        margin-top: -19px;
+        margin-bottom: 15px;
+    }
+    .eb508rt img {
+        margin-top: -17px;
+    }
+    .eb600rt img {
+        margin-top: -30px;
+    }
+    .eb633rt img {
+        margin-top: -13px;
+    }
+    .eb802 img {
+        margin-top: -30px;
+    }
+    .eb802rt img {
+        margin-top: -15px;
+        width: 170px;
+    }
+    .eb854 img {
+        margin-top: -9px;
+    }
+    .eb854rt img {
+        margin-top: 0px;
+        width: 170px;
+    }
+    @media (max-width:@screen-md-max) and (min-width:@screen-md-min) {
+        .eb212 img {
+            margin-top: 6px;
+            margin-bottom: 15px;
+        }
+        .eb344 img {
+            margin-top: -6px;
+            margin-bottom: 15px;
+        }
+        .eb508rt img {
+            margin-top: -17px;
+        }
+        .eb600rt img {
+            margin-top: -5px;
+        }
+        .eb633rt img {
+            margin-top: -11px;
+        }
+        .eb802 img {
+            margin-top: -26px;
+        }
+        .eb802rt img {
+            margin-top: -13px;
+        }
+        .eb854 img {
+            margin-top: -7px;
+        }
+        .eb854rt img {
+            margin-top: 2px;
+        }
+        .btn {
+            padding-left: 29px;
+            padding-right: 29px;
+        }
+    }
+    @media (max-width:@screen-sm-max) and (min-width:@screen-sm-min) {
+        .eb212 img {
+            margin-top: 6px;
+            margin-bottom: 15px;
+        }
+        .eb344 img {
+            margin-top: -6px;
+            margin-bottom: 15px;
+        }
+        .eb508rt img {
+            margin-top: -17px;
+        }
+        .eb600rt img {
+            margin-top: -5px;
+        }
+        .eb633rt img {
+            margin-top: -11px;
+        }
+        .eb802 img {
+            margin-top: -26px;
+        }
+        .eb802rt img {
+            margin-top: -13px;
+        }
+        .eb854 img {
+            margin-top: -7px;
+        }
+        .eb854rt img {
+            margin-top: 2px;
+        }
+        .btn {
+            padding-left: 29px;
+            padding-right: 29px;
+        }
+    }
+}
+.footnote {
+    position: relative;
+    display: block;
+    padding-left: 12px;
+    margin-top: 30px;
+
+    &:before {
+        content: "*";
+        color: @red;
+        .antialiased;
+        font-size: 21px;
+        .sans2;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2px;
     }
 }

@@ -43,10 +43,10 @@
 				<div id="backdrop" class="collapsed"></div>
 				<nav id="main-nav" class="collapsed">
 					<ul class="main-level">
-						<li><a href="/" class="active">Home</a></li>
+						<li><a href="/">Home</a></li>
 						<li class="back"><a href="javascript:void(0);">&lt; menu</a></li>
 						<li class="parent special">
-							<a class="desktop" href="/products">
+							<a class="desktop active" href="/products">
 							Products</a>
 							<a class="mobile" href="javascript:void(0);">
 							Products</a>
@@ -117,63 +117,115 @@
 				</nav>
 			</div>
 		</header>
-		<div class="content" id="home">
-			<div class="banner">
-				<img class="desktop" src="/images/banner-home.jpg" alt="Shindaiwa Sprayers - Perfect for Every Job" />
-				<img class="mobile" src="/images/banner-mobile.jpg" alt="Shindaiwa Sprayers - Perfect for Every Job" />
-				<div class="mobile subline">Perfect for every job</div>
+		<div class="content" id="products">
+			<div class="banner-thin desktop">
+				<h1>Products</h1>
 			</div>
-			<div class="container">
-				<div class="spot-marketing" id="marketing-carousel">
-					<div class="marketing-item">
-						<div class="item">
-							<h2>Shindaiwa&rsquo;s Fleet Program!</h2>
-							<img src="/images/headline-fleet.jpg" alt="Shindaiwa Landscaper Fleet Discount Program" />
-							<p>The best fleet program dedicated to landscapers. Deep discounts starting at 16%!</p>
-							<a class="btn btn-red" href="#">learn more</a>
-						</div>
-					</div>
-					<div class="marketing-item">
-						<div class="item">
-							<h2>7-Day Money Back Guarantee!</h2>
-							<img src="/images/headline-guarantee.jpg" alt="Shindaiwa Landscaper Fleet Discount Program" />
-							<p>This program includes all engine-driven units and Multi-Tool Accessories only. No other parts or accessories are considered part of this program. Effective on all purchases after January 1, 2013.</p>
-							<a class="btn btn-red" href="#">learn more</a>
-						</div>
-					</div>
-					<div class="marketing-item">
-						<div class="item">
-							<h2>Consumer Warranty!</h2>
-							<img src="/images/headline-warranty.jpg" alt="Shindaiwa Landscaper Fleet Discount Program" />
-							<p>Shindaiwa has added a 5-year Consumer Warranty effective on all purchases after January 1, 2013. Coupled with our 2-year Commercial Warranty, Shindaiwa offers two of the strongest warranties in the industry.</p>
-							<a class="btn btn-red" href="#">learn more</a>
-						</div>
-					</div>
+			<div class="breadcrumbs desktop">
+				<div class="container">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li>&gt;</li>
+						<li>Products</li>
+					</ul>
 				</div>
-				<div class="row videos">
-					<div class="col-sm-6">
-						<div class="item" href="#">
-							<a class="video-box" href="#">
-								<img src="/images/play.png" alt="&gt;" class="play" />
-								<img src="/images/videos/debris-caption.jpg" alt="Clearing Yard Debris with Shindaiwa" class="video" />
+			</div>
+			<div class="product-choose mobile">
+				<div class="container">
+					<a class="btn btn-red" href="javascript:void(0);">Choose a Product</a>
+				</div>
+			</div>
+			<div class="product-tiles">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="/products/blowers" class="tile tile-blowers">
+								<h3>Blowers</h3>
+								<img src="/images/products/blowers.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-brushcutters">
+								<h3>Brushcutters</h3>
+								<img src="/images/products/brushcutters.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-edgers">
+								<h3>Edgers</h3>
+								<img src="/images/products/edgers.png" alt="" />
 							</a>
 						</div>
 					</div>
-					<div class="col-sm-6">
-						<div class="item">
-							<a class="video-box" href="#">
-								<img src="/images/play.png" alt="&gt;" class="play" />
-								<img src="/images/videos/speedfeed-caption.jpg" alt="Speed-Feed Head Demonstration" class="video" />
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="/products/multi-tool" class="tile tile-multi-tool">
+								<h3>Multi-Tool</h3>
+								<img src="/images/products/multi-tool.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-hedge-trimmers">
+								<h3>Hedge Trimmers</h3>
+								<img src="/images/products/hedge-trimmers.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-articulated-hedge-trimmer">
+								<h3>Articulated Hedge Trimmer</h3>
+								<img src="/images/products/articulated-hedge-trimmer.png" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-trimmers">
+								<h3>Trimmers</h3>
+								<img src="/images/products/trimmers.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-power-broom">
+								<h3>Power Broom</h3>
+								<img src="/images/products/power-broom.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-spreaders">
+								<h3>Spreaders</h3>
+								<img src="/images/products/spreaders.png" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-sprayers">
+								<h3>Sprayers</h3>
+								<img src="/images/products/sprayers.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-speed-feed">
+								<h3>Speed-Feed</h3>
+								<img src="/images/products/speed-feed.png" alt="" />
+							</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-accessories">
+								<h3>Accessories</h3>
+								<img src="/images/products/accessories.png" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="#" class="tile tile-red-armor">
+								<h3>Red Armor Oil</h3>
+								<img src="/images/products/red-armor.png" alt="" />
 							</a>
 						</div>
 					</div>
 				</div>
-				<h1>Performance. Durability. Quality.</h1>
-				<p>For over 50 years Shindaiwa has been a legendary industry leader in manufacturing high-performance outdoor power equipment for professional users around the world. Our long history features the development of iconic equipment including the T27 and T270 Trimmers and, with a choice of engine technologies combined with four new models introduced in early 2013, Shindaiwa's presence will continue into the future.</p>
-				<p class="desktop">Shindaiwa commercial-use equipment includes grass trimmers, brushcutters, blowers, hedge trimmers, and our innovative Speed-Feed&reg; &ndash; the trimmer head that can be loaded, without disassembly, in 30 seconds or less! Check out this video to see it in action.</p>
-				<p class="desktop">Shindaiwa manufactures premium, high quality products, and to support our confidence in the product, we added a <strong>5-year consumer warranty</strong>, effective on all purchases after January 1, 2013 and, in January 2010, we doubled our commercial warranty to a full two years. Shindaiwa offers two of the strongest warranties in the industry!</p>
-				<p class="desktop">Shindaiwa equipment is available in a choice of engine technologies &ndash; dependable 2-stroke and an all new 2/4 stroke engine technology. Shindaiwa’s 2-stroke technology is lightweight and performs day in and day out.</p>
-				<p><a class="mobile" href="#">Learn More About Shindaiwa</a></p>
 			</div>
 		</div>
 		<div class="footer-above mobile">
