@@ -345,6 +345,7 @@ header {
                     overflow: hidden;
                     @media (min-width:@screen-sm-min) {
                         height: 0 !important;
+                        padding: 5px 0;
                     }
 
                     li {
@@ -356,11 +357,14 @@ header {
                             display: block;
                             width: 100%;
                             font-size: 15px;
-                            border-bottom: 1px solid #d6d6d6;
-                            padding: 3px 15px;
-                        }
-                        a:hover, a:focus, a:active {
-                            color: @red;
+                            padding: 6px 15px;
+
+                            &.active {
+                                color: @white;
+                            }
+                            &:hover, &:focus {
+                                color: @red;
+                            }
                         }
                     }
                 }
@@ -388,7 +392,7 @@ header {
             }
         }
         a.active {
-            font-weight: bold;
+            color: @red;
         }
         a:hover, &:focus {
             color: @red;
@@ -1292,7 +1296,7 @@ footer {
 #products-page {
     @media (max-width:@screen-tb-max) {
         padding-top: 15px;
-        
+
         &.content {
             padding-bottom: 0;
         }
