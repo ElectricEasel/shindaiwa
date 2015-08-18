@@ -1523,6 +1523,17 @@ footer {
             @media (max-width:@screen-md-max) and (min-width:@screen-sm-min) {
                 width: 200px;
             }
+            @media (max-width:@screen-tb-max) {
+                &.darker {
+                    background: @darkred;
+                    box-shadow: 0 6px 0 darken(@darkred, 15%);
+
+                    &:hover, &:focus {
+                        background: darken(@darkred, 15%);
+                        box-shadow: 0 6px 0 darken(@darkred, 30%);
+                    }
+                }
+            }
         }
     }
     .product-details {
