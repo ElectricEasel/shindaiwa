@@ -23,6 +23,8 @@ $(document).ready(function(){
 			search.focus();
 		}
 	});
+
+	
 });
 
 $(window).load(function(){
@@ -75,4 +77,24 @@ $(window).load(function(){
 		$('main-nav ul.main-level > li').show();
 		returnMenu.hide();
 	})
-})
+
+	equalHeights($('.marketing-item .item p'));
+	
+	$(window).resize(function(){
+		equalHeights($('.marketing-item .item p'));
+	});
+});
+
+function equalHeights(columns) {
+	var maxHeight = 0;
+	columns.each(function(){
+		if ($(this).height() > maxHeight) {
+			maxHeight = $(this).height();
+		}
+	});
+	columns.each(function(){
+		if ($(this).height() < maxHeight) {
+			$(this).height(maxHeight);
+		}
+	});
+}
