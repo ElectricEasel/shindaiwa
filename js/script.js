@@ -65,7 +65,7 @@ $(window).load(function(){
 		if($(this).hasClass('expanded')) {
 			return 0;
 		}
-		$('main-nav ul.main-level > li').hide();
+		$('#main-nav ul.main-level > li').hide();
 		returnMenu.show();
 		$(this).show();
 		$(this).toggleClass('expanded');
@@ -74,9 +74,9 @@ $(window).load(function(){
 	returnMenu.click(function(){
 		$('#main-nav ul.sub-level').css('height','0');
 		parent.removeClass('expanded');
-		$('main-nav ul.main-level > li').show();
+		$('#main-nav ul.main-level > li').show();
 		returnMenu.hide();
-	})
+	});
 
 	equalHeights($('.marketing-item .item p'));
 	
@@ -88,13 +88,14 @@ $(window).load(function(){
 function equalHeights(columns) {
 	var maxHeight = 0;
 	columns.each(function(){
-		if ($(this).height() > maxHeight) {
-			maxHeight = $(this).height();
+		$(this).outerHeight('auto');
+		if ($(this).outerHeight() > maxHeight) {
+			maxHeight = $(this).outerHeight();
 		}
 	});
 	columns.each(function(){
-		if ($(this).height() < maxHeight) {
-			$(this).height(maxHeight);
+		if ($(this).outerHeight() < maxHeight) {
+			$(this).outerHeight(maxHeight);
 		}
 	});
 }
