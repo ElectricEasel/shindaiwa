@@ -53,6 +53,7 @@ $(window).load(function(){
 	});
 	var parent = $('.parent > a');
 	parent.click(function(){
+		var grandparent = $(this).parent('li');
 		if($(this).parent('li').hasClass('special')) {
 			return 0;
 		}
@@ -114,7 +115,7 @@ function equalHeights(columns) {
 		}
 	});
 	columns.each(function(){
-		if ($(this).outerHeight() < maxHeight) {
+		if ($(this).outerHeight() <= maxHeight) {
 			$(this).outerHeight(maxHeight);
 		}
 	});
