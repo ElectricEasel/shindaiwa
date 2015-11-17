@@ -46,7 +46,7 @@
 						<li><a href="/">Home</a></li>
 						<li class="back"><a href="javascript:void(0);">&lt; menu</a></li>
 						<li class="parent special">
-							<a class="parent-link active" href="/products">
+							<a class="parent-link" href="/products">
 							Products</a>
 							<ul class="sub-level">
 								<li class="mobile"><a href="/products">All Products</a></li>
@@ -108,119 +108,18 @@
 								<li><a href="#">Newsletter Signup</a></li>
 							</ul>
 						</li>
-						<li><a href="/store-locator">Dealer Locator</a></li>
+						<li><a href="/store-locator" class="active">Dealer Locator</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<div class="content" id="products-page">
+		<div class="content" id="store-locator-page">
 			<div class="banner-thin desktop">
-				<h1>Products</h1>
+				<h1>Dealer Locator</h1>
 			</div>
-			<div class="breadcrumbs desktop">
-				<div class="container">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li>&gt;</li>
-						<li>Products</li>
-					</ul>
-				</div>
-			</div>
-			<div class="product-choose mobile">
-				<div class="container">
-					<a class="btn btn-red" href="javascript:void(0);">Choose a Product</a>
-				</div>
-			</div>
-			<div class="product-tiles">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4">
-							<a href="/products/blowers" class="tile tile-blowers">
-								<h3>Blowers</h3>
-								<img src="/images/products/blowers.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-brushcutters">
-								<h3>Brushcutters</h3>
-								<img src="/images/products/brushcutters.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-edgers">
-								<h3>Edgers</h3>
-								<img src="/images/products/edgers.png" alt="" />
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<a href="/products/multi-tool" class="tile tile-multi-tool">
-								<h3>Multi-Tool</h3>
-								<img src="/images/products/multi-tool.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-hedge-trimmers">
-								<h3>Hedge Trimmers</h3>
-								<img src="/images/products/hedge-trimmers.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-shafted-hedge-trimmer">
-								<h3>Shafted Hedge Trimmer</h3>
-								<img src="/images/products/shafted-hedge-trimmer.png" alt="" />
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-trimmers">
-								<h3>Trimmers</h3>
-								<img src="/images/products/trimmers.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-power-broom">
-								<h3>Power Broom</h3>
-								<img src="/images/products/power-broom.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-spreaders">
-								<h3>Spreaders</h3>
-								<img src="/images/products/spreaders.png" alt="" />
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-sprayers">
-								<h3>Sprayers</h3>
-								<img src="/images/products/sprayers.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-speed-feed">
-								<h3>Speed-Feed</h3>
-								<img src="/images/products/speed-feed.png" alt="" />
-							</a>
-						</div>
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-accessories">
-								<h3>Accessories</h3>
-								<img src="/images/products/accessories.png" alt="" />
-							</a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<a href="#" class="tile tile-red-armor">
-								<h3>Red Armor Oil</h3>
-								<img src="/images/products/red-armor.png" alt="" />
-							</a>
-						</div>
-					</div>
+			<div class="container">
+				<div id="store-locator-frame">
+					<iframe onload="resizeIframe(this)" src="/where2getit/store-locator/store-locator.html" align="left"></iframe>
 				</div>
 			</div>
 		</div>

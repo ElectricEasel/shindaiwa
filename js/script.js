@@ -120,3 +120,13 @@ function equalHeights(columns) {
 		}
 	});
 }
+
+function resizeIframe(iframe) {
+	var I = iframe.contentWindow.document;
+	var frameHeight = Math.max(
+		I.body.scrollHeight, I.documentElement.scrollHeight,
+		I.body.offsetHeight, I.documentElement.offsetHeight,
+		I.body.clientHeight, I.documentElement.clientHeight
+	);
+	iframe.height = frameHeight + "px";
+}

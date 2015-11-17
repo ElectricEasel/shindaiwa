@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+		<title>DEMO Locator</title>
+
+		<meta name="keywords" content="Locator" />
+		<meta name="description" content="Dealer locator" />
+
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name='format-detection' content='telephone=no' /> 
+		<noscript>
+			<meta http-equiv="refresh" content="1; URL=nojs.html" />
+		</noscript>
+
+		<link type="text/css" href="store-locator.css" rel="stylesheet" media="all"/>
+	</head>
+	
+	<body>
+		<form id="locator_search" autocomplete="off">
+        	<div id="controls">
+          		<div id="form">
+					<h4>Find A Dealer</h4>
+					<label for="location">Enter Location:</label>
+					<input type="text" id="location" name="location" />
+					<input class="btn btn-red" id="search_button" type="submit" value="Search" name="search"/>
+				</div>
+			</div>
+
+			<div id="locator">
+				<div id="legend">
+					<h5>Legend</h5>
+					<div class="legend-section pins">
+						<div class="legend-row">
+							<span class="pin pin-black"></span>
+							<div class="checkbox-wrap">
+								<a class="custom-check black checked" href="javascript:void(0);"> </a>
+								<input type="checkbox" name="dealer-type" value="full-service" />
+							</div>
+							<span class="legend-label"><strong>Full Service Stores</strong></span>
+							<a class="question" href="javascript:void(0);">?</a>
+						</div>
+						<div class="legend-row">
+							<span class="pin pin-red"></span>
+							<div class="checkbox-wrap">
+								<a class="custom-check red checked" href="javascript:void(0);"> </a>
+								<input type="checkbox" name="dealer-type" value="sales-only" />
+							</div>
+							<span class="legend-label"><strong>All Stores</strong></span>
+							<a class="question" href="javascript:void(0);">?</a>
+						</div>
+						<div class="legend-row">
+							<span class="pin pin-green"></span>
+							<div class="checkbox-wrap">
+								<a class="custom-check green checked" href="javascript:void(0);"> </a>
+								<input type="checkbox" name="dealer-type" value="with-promotions" />
+							</div>
+							<span class="legend-label">Dealers with Promotions</span>
+							<a class="question" href="javascript:void(0);">?</a>
+						</div>
+					</div>
+					<div class="legend-section badges">
+						<div class="legend-row">
+							<span class="icon icon-repair-warranty"></span>
+							<span class="legend-label">Repair/Warranty Service</span>
+							<a class="question" href="javascript:void(0);">?</a>
+						</div>
+						<div class="legend-row">
+							<span class="icon icon-signature-elite"></span>
+							<span class="legend-label">Signature Elite Dealers</span>
+							<a class="question" href="javascript:void(0);">?</a>
+						</div>
+					</div>
+				</div>
+				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2963.5023025265177!2d-88.3351553!3d42.0324081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f1ada33fcb1ab%3A0xb199ed8f0499065a!2s36W710+Foothill+Rd%2C+Elgin%2C+IL+60123!5e0!3m2!1sen!2sus!4v1442324132885" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</form>
+
+		<div id="panel">
+			<a class="btn btn-red print" href="javascript:if(window.print)window.print();">Print Results</a>
+			<h4>4 Dealers Nearby</h4>
+			<table>
+				<thead>
+					<tr>
+						<th class="map-cell">Map</th>
+						<th class="address-cell">Dealer Address</th>
+						<th class="type-cell">Type</th>
+						<th class="service-cell">Service</th>
+						<th class="promotions-cell">Promotions</th>
+						<th class="connect-cell">Connect</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="map-cell">
+							<span class="pin-large pin-black">1</span>
+							<span><strong>show on map</strong></span>
+							<span>2.7 mi away</span>
+						</td>
+						<td class="address-cell">
+							<a class="name" href="javascript:void(0);">Ralph Helm Inc</a>
+							<span>36W710 Foothill Road</span>
+							<span>Elgin, Illinois 60123</span>
+							<span class="phone"><strong>Phone:</strong> (847) 695-1616</span>
+						</td>
+						<td class="type-cell"><img src="images/icon-signature-elite.png" alt="Signature Elite Dealer" /></td>
+						<td class="service-cell"><img src="images/icon-repair-warranty.png" alt="Repair/Warranty Service" /></td>
+						<td class="promotions-cell"><img src="images/icon-participating-dealer.png" alt="Dealers With Promotions" /></td>
+						<td class="connect-cell">
+							<a class="thick" href="javascript:void(0);">Send to Email</a>
+							<a class="thick" href="javascript:void(0);">Send to Phone</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="map-cell">
+							<span class="pin-large pin-red">2</span>
+							<span><strong>show on map</strong></span>
+							<span>2.7 mi away</span>
+						</td>
+						<td class="address-cell">
+							<a class="name" href="javascript:void(0);">Ralph Helm Inc</a>
+							<span>36W710 Foothill Road</span>
+							<span>Elgin, Illinois 60123</span>
+							<span class="phone"><strong>Phone:</strong> (847) 695-1616</span>
+						</td>
+						<td class="type-cell"><img src="images/icon-signature-elite.png" alt="Signature Elite Dealer" /></td>
+						<td class="service-cell"><img src="images/icon-repair-warranty.png" alt="Repair/Warranty Service" /></td>
+						<td class="promotions-cell"><img src="images/icon-participating-dealer.png" alt="Dealers With Promotions" /></td>
+						<td class="connect-cell">
+							<a class="thick" href="javascript:void(0);">Send to Email</a>
+							<a class="thick" href="javascript:void(0);">Send to Phone</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="map-cell">
+							<span class="pin-large pin-red">3</span>
+							<span><strong>show on map</strong></span>
+							<span>2.7 mi away</span>
+						</td>
+						<td class="address-cell">
+							<a class="name" href="javascript:void(0);">Ralph Helm Inc</a>
+							<span>36W710 Foothill Road</span>
+							<span>Elgin, Illinois 60123</span>
+							<span class="phone"><strong>Phone:</strong> (847) 695-1616</span>
+						</td>
+						<td class="type-cell"><img src="images/icon-signature-elite.png" alt="Signature Elite Dealer" /></td>
+						<td class="service-cell"><img src="images/icon-repair-warranty.png" alt="Repair/Warranty Service" /></td>
+						<td class="promotions-cell"><img src="images/icon-participating-dealer.png" alt="Dealers With Promotions" /></td>
+						<td class="connect-cell">
+							<a class="thick" href="javascript:void(0);">Send to Email</a>
+							<a class="thick" href="javascript:void(0);">Send to Phone</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="map-cell">
+							<span class="pin-large pin-black">4</span>
+							<span><strong>show on map</strong></span>
+							<span>2.7 mi away</span>
+						</td>
+						<td class="address-cell">
+							<a class="name" href="javascript:void(0);">Ralph Helm Inc</a>
+							<span>36W710 Foothill Road</span>
+							<span>Elgin, Illinois 60123</span>
+							<span class="phone"><strong>Phone:</strong> (847) 695-1616</span>
+						</td>
+						<td class="type-cell"><img src="images/icon-signature-elite.png" alt="Signature Elite Dealer" /></td>
+						<td class="service-cell"><img src="images/icon-repair-warranty.png" alt="Repair/Warranty Service" /></td>
+						<td class="promotions-cell"><img src="images/icon-participating-dealer.png" alt="Dealers With Promotions" /></td>
+						<td class="connect-cell">
+							<a class="thick" href="javascript:void(0);">Send to Email</a>
+							<a class="thick" href="javascript:void(0);">Send to Phone</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p class="copyright">
+			<script type="text/javascript">
+				var d = new Date()
+				document.write("<a href='http://www.where2getit.com' target='_new'>Mapping Locator </a> Powered by Where 2 Get It ")
+                        document.write("Copyright &copy; ")
+				document.write(d.getFullYear())
+				document.write(", All Rights Reserved.<br/>")
+                		document.write("")
+			</script>
+        	<script type="text/javascript">
+	            var d = new Date()
+	            document.write(" <img src=/w2gi/images/logo_navteq_large.gif> ")
+	            document.write(" &copy; Copyright ")
+	            document.write(d.getFullYear())
+	          	document.write(" NAVTEQ Corp.  ")
+        	</script>
+ 			<a href="http://www.where2getit.com/terms/terms.html" onClick="window.open(this.href,'_blank','width=988,height=600,scrollbars=yes,location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=yes');return false;">Use Subject to and Conditions</a> 
+		</p>
+
+		<div id="navteqfooter">                                     
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.custom-check').click(function(){
+				if ($(this).hasClass('checked')) {
+					$(this).removeClass('checked');
+					$(this).next('input[type="checkbox"').prop('checked',false);
+				} else {
+					$(this).addClass('checked');
+					$(this).next('input[type="checkbox"').prop('checked',true);
+				}
+			});
+		});
+		</script>
+	</body>
+</html>
+
